@@ -4,13 +4,15 @@ A new Flutter project.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Clone this repo into your system.
 
-A few resources to get you started if this is your first Flutter project:
+Open the project into your Android Studio. Make sure flutter environment is setup in your system.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Go to pubspec.yaml file click pub get
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Now run your app on Android Emulator
+
+Additional Notes
+Troubleshooting: If you encounter issues, refer to the Flutter documentation or search for specific errors online.
+
+iOS Build: For building on iOS, you need a macOS machine with Xcode installed. Use flutter build ios to build for iOS and follow Xcode's instructions to run on a simulator or device.
