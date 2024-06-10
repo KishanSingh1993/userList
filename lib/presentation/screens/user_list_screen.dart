@@ -13,7 +13,7 @@ class UserListScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('User List')),
+      appBar: AppBar(title: const Text('User List')),
       body: BlocProvider(
         create: (context) => UserBloc(getUsers: GetUsers(UserRepositoryImpl(ApiProvider()))),
         child: UserList(),
@@ -57,9 +57,9 @@ class _UserListState extends State<UserList> {
     return BlocBuilder<UserBloc, UserState>(
       builder: (context, state) {
         if (state is UserInitial) {
-          return Center(child: CircularProgressIndicator());
+          return const Center(child: CircularProgressIndicator());
         } else if (state is UserLoading) {
-          return Center(child: CircularProgressIndicator());
+          return const Center(child: CircularProgressIndicator());
         } else if (state is UserLoaded) {
           return ListView.builder(
             controller: _scrollController,

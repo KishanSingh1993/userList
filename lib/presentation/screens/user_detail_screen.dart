@@ -13,12 +13,12 @@ class UserDetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('User Detail')),
+      appBar: AppBar(title: const Text('User Detail')),
       body: FutureBuilder<User>(
         future: GetUser(UserRepositoryImpl(ApiProvider()))(userId),
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
-            return Center(child: CircularProgressIndicator());
+            return const Center(child: CircularProgressIndicator());
           } else if (snapshot.hasError) {
             return Center(child: Text('Error: ${snapshot.error}'));
           } else if (snapshot.hasData) {
@@ -31,10 +31,10 @@ class UserDetailScreen extends StatelessWidget {
                     radius: 50,
                     backgroundImage: NetworkImage(user.avatar),
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   Text('${user.firstName} ${user.lastName}', style: TextStyle(fontSize: 24)),
-                  SizedBox(height: 10),
-                  Text(user.email, style: TextStyle(fontSize: 18)),
+                  const SizedBox(height: 10),
+                  Text(user.email, style: const TextStyle(fontSize: 18)),
                 ],
               ),
             );
