@@ -1,4 +1,10 @@
-part of 'user_bloc.dart';
+// presentation/blocs/user_state.dart
+
+import 'package:equatable/equatable.dart';
+
+import '../../domain/entities/user.dart';
+
+
 
 abstract class UserState extends Equatable {
   const UserState();
@@ -14,7 +20,7 @@ class UserLoading extends UserState {}
 class UserLoaded extends UserState {
   final List<User> users;
 
-  UserLoaded(this.users);
+  UserLoaded({required this.users});
 
   @override
   List<Object> get props => [users];
@@ -23,7 +29,7 @@ class UserLoaded extends UserState {
 class UserError extends UserState {
   final String message;
 
-  UserError(this.message);
+  UserError({required this.message});
 
   @override
   List<Object> get props => [message];

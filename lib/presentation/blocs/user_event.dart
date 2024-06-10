@@ -1,4 +1,7 @@
-part of 'user_bloc.dart';
+// presentation/blocs/user_event.dart
+import 'package:equatable/equatable.dart';
+
+
 
 abstract class UserEvent extends Equatable {
   const UserEvent();
@@ -7,10 +10,10 @@ abstract class UserEvent extends Equatable {
   List<Object> get props => [];
 }
 
-class FetchUserList extends UserEvent {
+class FetchUsers extends UserEvent {
   final int page;
 
-  FetchUserList(this.page);
+  FetchUsers({required this.page});
 
   @override
   List<Object> get props => [page];
